@@ -44,8 +44,8 @@ class App extends React.Component {
       <BrowserRouter>
         <MainLayout>
           <AnimatedSwitch 
-            atEnter={{opacity: 0, offset: 200}}
-            atLeave={{opacity: 0, offset: 0}}
+            atEnter={{opacity: 0, top: -200}}
+            atLeave={{opacity: 0}}
             atActive={{opacity: 1, offset: 0}}
             className={styles.switchWrapper}
             location={location}
@@ -55,8 +55,8 @@ class App extends React.Component {
             {/* TODO - add more routes for other views */}
             <Route exact path='/trip/:id' component={Trip} />
             <Route exact path='/country/:id' component={Country} />
-            <Route exact path='/countries/:id' component={Countries} />
-            <Route exact path='/regions/:id' component={Regions} />
+            <Route exact path='/countries/' component={Countries} />
+            <Route exact path='/regions/' component={Regions} />
             <Route exact path='/info' component={Info} />
             <Route path='*' component={NotFound} />
           </AnimatedSwitch>
