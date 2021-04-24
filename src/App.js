@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './App';
+import styles from './App.scss';
 import {connect} from 'react-redux';
 import {BrowserRouter, Route} from 'react-router-dom';
 import PropTypes from 'prop-types';
@@ -44,9 +44,9 @@ class App extends React.Component {
       <BrowserRouter>
         <MainLayout>
           <AnimatedSwitch 
-            atEnter={{opacity: 0, top: -200}}
+            atEnter={{opacity: 0, top: 200}}
             atLeave={{opacity: 0}}
-            atActive={{opacity: 1, offset: 0}}
+            atActive={{opacity: 1, top: 0}}
             className={styles.switchWrapper}
             location={location}
           >
