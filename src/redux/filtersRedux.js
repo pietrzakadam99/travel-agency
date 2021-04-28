@@ -13,8 +13,8 @@ export const CHANGE_PHRASE = createActionName('CHANGE_PHRASE');
 // TODO - add other action types
 export const ADD_TAG = createActionName('ADD_TAG');
 export const REMOVE_TAG = createActionName('REMOVE_TAG');
-export const CHANGE_DURATION_FROM =createActionName('CHANGE_DURATION_FROM');
-export const CHANGE_DURATION_TO =createActionName('CHANGE_DURATION_TO');
+export const CHANGE_DURATION_FROM = createActionName('CHANGE_DURATION_FROM');
+export const CHANGE_DURATION_TO = createActionName('CHANGE_DURATION_TO');
 
 // action creators
 export const changeSearchPhrase = payload => ({ payload, type: CHANGE_PHRASE });
