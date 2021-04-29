@@ -9,7 +9,7 @@ const OrderForm = props => (
   <Row>
     {pricing.map((option) => 
       <Col md={4} key={option.id}>
-        <OrderOption {...option.id} currentValue = {props.options[option.id]} setOrderOption={props.setOrderOption}  />
+        <OrderOption {...option} currentValue = {props.options[option.id]} setOrderOption={props.setOrderOption}  />
       </Col>
     )}
     <Col xs={12}>
@@ -22,6 +22,7 @@ OrderForm.propTypes = {
   tripCost: PropTypes.string,
   options: PropTypes.any,
   setOrderOption: PropTypes.func,
+  name: PropTypes.string,
 };
 
 export default OrderForm;
