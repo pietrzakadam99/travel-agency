@@ -52,10 +52,9 @@ describe('Component TripSummary', () => {
     expect(renderedTagThree).toEqual(expectedTags[2]);
   });
 
-  it('should not render span if tag is missing', () => {
-    expectedTags= [];
-    const renderedDiv = component.find('.tags div');
-    expect(renderedDiv.exists(expectedTags)).toBe(false);
+  it('should not render div tags if props tags is false', () => {
+    const component = shallow(<TripSummary tags={[]} />);
+    expect(component.find('.tags'));
   });
 });
 
