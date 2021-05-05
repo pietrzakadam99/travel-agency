@@ -6,6 +6,14 @@ describe('Component TripSummary', () => {
   it('should throw error without required props', () => {
     expect(() => shallow(<TripSummary />)).toThrow();
   });
+  
+  const expectedLink = '/trip/abc';
+  const expectedImage = 'image.jpg';
+  const expectedName = 'alt';
+  const expectedCost = '$100';
+  const expectedDays = 7;
+  let expectedTags = ['tag1', 'tag2', 'tag3'];
+  const tripId = 'abc';
 
   const component = shallow(<TripSummary
     id={tripId}
@@ -14,14 +22,7 @@ describe('Component TripSummary', () => {
     cost={expectedCost}
     days={expectedDays}
     tags={expectedTags} />);
-
-  const expectedLink = '/trip/abc';
-  const expectedImage = 'image.jpg';
-  const expectedName = 'alt';
-  const expectedCost = '$100';
-  const expectedDays = 7;
-  let expectedTags = ['tag1', 'tag2', 'tag3'];
-  const tripId = 'abc';
+  console.log(component.debug());
 
   it('should render correct link', () => {
     const renderedLink = component.find('.link').prop('to');
@@ -42,7 +43,7 @@ describe('Component TripSummary', () => {
     expect(renderedCostAndDays).toEqual(`${expectedDays} daysfrom ${expectedCost}`);
   });
 
-  it('should render tags in correct spands', () => {
+  it('should render tags in correct spans', () => {
     const renderedTagOne = component.find('.tags span').at(0).text();
     const renderedTagTwo = component.find('.tags span').at(1).text();
     const renderedTagThree = component.find('.tags span').at(2).text();
