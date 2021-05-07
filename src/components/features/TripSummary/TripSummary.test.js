@@ -22,7 +22,7 @@ describe('Component TripSummary', () => {
     cost={expectedCost}
     days={expectedDays}
     tags={expectedTags} />);
-  console.log(component.debug());
+  // console.log(component.debug());
 
   it('should render correct link', () => {
     const renderedLink = component.find('.link').prop('to');
