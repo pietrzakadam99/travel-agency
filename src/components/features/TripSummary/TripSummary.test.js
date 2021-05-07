@@ -53,8 +53,8 @@ describe('Component TripSummary', () => {
   });
 
   it('should not render div tags if props tags is false', () => {
-    const component = shallow(<TripSummary tags={[]} />);
-    expect(component.find('.tags'));
+    const component = shallow(<TripSummary />);
+    expect(component.find('.tags').exists()).toBe(false);
   });
 });
 
