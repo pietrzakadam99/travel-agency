@@ -112,10 +112,10 @@ describe('Component OrderOption', () => {
           /* tests for icons */
           it('contains div and icon', () => {
             const div = renderedSubcomponent.find('div');
-            expect(div.length).toBe(4);
+            expect(div.length).toBe(3);
       
             const emptyIcon = div.find('Icon').find('Icon[name="times-circle"]').length;
-            expect(emptyIcon).toBe(1);
+            expect(emptyIcon).toBe(0);
       
             const options = div.find('Icon').not('[name="times-circle"]');
             expect(options.length).toBe(mockProps.values.length);
